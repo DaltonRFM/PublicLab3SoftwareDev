@@ -1,0 +1,53 @@
+/* Basic CSS for a simple website layout */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #222;
+}
+
+header {
+    background: #2d6cdf;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+nav {
+    background: #1b4173;
+    padding: 0.5rem 2rem;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+footer {
+    background: #2d6cdf;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
