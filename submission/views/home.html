@@ -8,33 +8,111 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dalton's Personal Website</title>
+  <title>Dalton's Portfolio</title>
 
-  <!-- Optional: site icon -->
-  <!-- <link rel="icon" href="favicon.ico" /> -->
 
-  <!-- Optional: your stylesheet -->
   <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
 
-  <!-- Optional: Bootstrap (uncomment to use) -->
-  <!-- <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
     crossorigin="anonymous"
-  /> -->
+  />
+
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <!-- Content goes here -->
+<!-- Nav bar -->
 
-  <!-- Optional: your scripts -->
-  <script src="main.js"></script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html">Dalton's Portfolio</a>
 
-  <!-- Optional: Bootstrap JS (uncomment if using Bootstrap) -->
-  <!-- <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+      </ul>
+
+      <!-- Right image -->
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link p-0" href="#" aria-label="Profile">
+            <img src="../resources/img/Graduation ImagePNG.png" alt="Profile"
+                 class="avatar rounded-circle" width="36" height="36">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!-- End of nav bar -->
+
+
+
+    <!-- Page contents -->
+
+       <div class="container">
+
+
+        <div class="container my-5">
+        <div class="row align-items-center gx-5">
+            <div class="col-md-5 text-center text-md-end">
+            <img src="../resources/img/Graduation ImagePNG.png" alt="Grad pic"
+                class="img-fluid rounded-3 shadow" style="max-width: 280px;">
+            </div>
+
+            <div class="col-md-7">     <!-- Puts it to the side  -->
+      <h2>Hi, I'm Dalton</h2>
+      <p>
+        This image is from when I graduated high school back in 2023. Since then I have started my undergrad
+        at the University of Colorado Boulder!
+      </p>
+
+      <a href="resume.html" class="btn btn-primary">View my Résumé</a>
+
+
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+
+
+
+   <!-- This is the start of the footer and the stuff it has -->
+  <footer class="bg-dark text-light py-3 mt-5">
+  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+    <span class="small">Dalton Ford</span>
+    <div class="d-flex gap-2">
+      <a class="btn btn-outline-light btn-sm" href="https://github.com/DaltonRFM" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+      <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/dalton-ford8331/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a class="btn btn-outline-light btn-sm" href="mailto:dafo8331@colorado.edu" aria-label="Email">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+  
 </body>
 </html>

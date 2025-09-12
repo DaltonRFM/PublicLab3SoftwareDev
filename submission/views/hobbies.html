@@ -1,27 +1,82 @@
 <!doctype html>
+  <!-- Projects file. -->
 <html lang="en">
- <!-- I typed in the exact prompt on the lab
-  and got the template below. I made sure I understand
-  the code that was generated using AI.  -->
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dalton's Hobbies</title>
+  <title>Hobbies</title>
 
-  <!-- Optional: your stylesheet -->
+
   <link rel="stylesheet" href="styles.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <!-- Your content goes here -->
-   <h1>My Hobbies</h1>
-   <p>Welcome to the hobbies page! Here are some of my favorite pastimes:</p>
-   <ul>
-     <li>Reading: I love getting lost in a good book, especially science fiction and fantasy novels.</li>
-     <li>Hiking: Exploring nature trails and enjoying the great outdoors is one of my favorite activities.</li>
-     <li>Cooking: Experimenting with new recipes and cuisines is a fun way to spend my time.</li>
+<!-- Nav bar -->
 
-  <!-- Optional: your scripts -->
-  <script src="main.js"></script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html">Dalton's Portfolio</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+      </ul>
+
+      <!-- Right image of the nav bar -->
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link p-0" href="#" aria-label="Profile">
+            <img src="../resources/img/Graduation ImagePNG.png" alt="Profile"
+                 class="avatar rounded-circle" width="36" height="36">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!-- End of nav bar -->
+  <div class="container">
+        <h1>This is the page for Hobbies</h1>
+    </div>
+
+
+      <!-- This is the start of the footer and the stuff it has -->
+  <footer class="bg-dark text-light py-3 mt-5">
+  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+    <span class="small">Dalton Ford</span>
+    <div class="d-flex gap-2">
+      <a class="btn btn-outline-light btn-sm" href="https://github.com/DaltonRFM" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+      <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/dalton-ford8331/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a class="btn btn-outline-light btn-sm" href="mailto:dafo8331@colorado.edu" aria-label="Email">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+  
 </body>
 </html>
