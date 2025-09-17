@@ -3,3 +3,10 @@
 .navbar {
   background-color: black !important;
 }
+
+.accordion-body img {
+  max-height: 220px;
+  width: 100%;
+  background-color: white;
+  object-fit: contain; /* Doesn't make it the longest thing on the planet */
+}
