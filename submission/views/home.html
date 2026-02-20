@@ -1,20 +1,13 @@
 <!doctype html>
-  <!-- Listened to lab writeup and used ChatGPT to 
-   "Give me a barebones HTML structure for my personal website 
-   without adding any additional sections"
-   this is what it provided. I then modified the template to produce
-   how this file turned out. I made sure I understood all the code it provided. -->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dalton's Portfolio</title>
 
+  <title>Dalton Ford | Portfolio</title>
+  <meta name="description" content="Dalton Ford — CU Boulder CS student building full-stack web projects. Portfolio, projects, and résumé." />
 
-  <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
-
+  <!-- Bootstrap -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -22,124 +15,226 @@
     crossorigin="anonymous"
   />
 
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Your CSS (pick ONE path; keep it consistent across pages) -->
   <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Small page-specific polish (optional; you can move this into styles.css) -->
+  <style>
+    :root { --max: 1100px; }
+
+    main .container { max-width: var(--max); }
+
+    .hero { padding: 4rem 0 2rem; }
+
+    .hero-img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+    .avatar { object-fit: cover; }
+
+    .lead {
+      font-size: 1.1rem;
+      line-height: 1.65;
+      color: rgba(0,0,0,.75);
+    }
+
+    .section-muted {
+      background: rgba(0,0,0,.02);
+      border-top: 1px solid rgba(0,0,0,.06);
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+  </style>
 </head>
+
 <body class="d-flex flex-column min-vh-100">
-<!-- Nav bar -->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="home.html">Dalton's Portfolio</a>
+  <!-- Nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-semibold" href="home.html">Dalton Ford</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
-        <li class="nav-item"><a class="nav-link" href="resume.html">Résumé</a></li>
-      </ul>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <!-- Add 'active' to the current page -->
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Résumé</a></li>
+        </ul>
 
-      <!-- Right image -->
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item">
-          <a class="nav-link p-0" href="#" aria-label="Profile">
-            <img src="../resources/img/Graduation ImagePNG.png" alt="Profile"
-                 class="avatar rounded-circle" width="36" height="36">
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    <!-- End of nav bar -->
-
-<main class="flex-grow-1">
-
-    <!-- Image and text -->
-
-       <div class="container">
-        <!-- <h1 class="text-center">Dalton's Portfolio!</h1> -->
-
-        <div class="container my-5">
-        <div class="row align-items-center gx-5">
-            <div class="col-md-5 text-center text-md-end">
-            <!-- <img src="../resources/img/Graduation ImagePNG.png" alt="Grad pic"
-                class="img-fluid rounded-3 shadow" style="max-width: 280px;"> -->
-
-<div class="col-md-5 text-center text-md-end">
-  <div id="aboutCarousel" class="carousel slide d-inline-block" data-bs-ride="carousel" style="max-width: 280px;">
-    <!-- Carousel needed -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-
-    <!-- image sliders -->
-    <div class="carousel-inner rounded-3 shadow">
-      <div class="carousel-item active">
-        <img src="../resources/img/Graduation ImagePNG.png" class="d-block w-100" alt="grad">
-      </div>
-      <div class="carousel-item">
-        <img src="../resources/img/headshot2.jpg" class="d-block w-100" alt="booth">
-      </div>
-      <div class="carousel-item">
-        <img src="../resources/img/photo.jpeg" class="d-block w-100" alt="linkedin Photo">
+        <!-- Right image -->
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link p-0" href="resume.html" aria-label="Open résumé">
+              <img src="../resources/img/imageOne.jpg"
+                   alt="Dalton Ford profile photo"
+                   class="avatar rounded-circle border border-2 border-light"
+                   width="36" height="36">
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
+  </nav>
+  <!-- End nav bar -->
 
-   
-  </div>
-</div>
+  <main class="flex-grow-1">
 
+    <!-- Hero / About -->
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+
+          <!-- Carousel column -->
+          <div class="col-md-5 text-center text-md-end">
+            <div id="aboutCarousel" class="carousel slide d-inline-block" data-bs-ride="carousel" style="max-width: 320px;">
+              <!-- Indicators -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+              </div>
+
+              <!-- Slides -->
+              <div class="carousel-inner rounded-3 shadow overflow-hidden">
+                <div class="carousel-item active">
+                  <img src="../resources/img/imageOne.jpg" class="d-block w-100 hero-img" alt="Dalton at high school graduation">
+                </div>
+                <div class="carousel-item">
+                  <img src="../resources/img/imageTwo.jpg" class="d-block w-100 hero-img" alt="Dalton headshot">
+                </div>
+                <div class="carousel-item">
+                  <img src="../resources/img/imageThree.jpg" class="d-block w-100 hero-img" alt="Dalton professional photo">
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
+          </div>
 
-            <div class="col-md-7">     <!-- this puts it to the side  -->
-      <h2>Hi, I'm Dalton</h2>
-      <p>
-        This image is from when I graduated high school back in 2023. Since then I have started my undergrad
-        at the University of Colorado Boulder! I currently work as a Welcome Desk Specialist at Leeds School of Business on campus. I am involved in National Society of
-        Black Engineers (NSBE), Alpha Kappa Psi, and Kappa Theta Pi. I am majoring in Computer Science with a minor in Business.
-      </p>
+          <!-- Text / CTA column -->
+          <div class="col-md-7">
+            <div class="card shadow-sm border-0">
+              <div class="card-body p-4 p-lg-5">
+                <h1 class="h2 mb-1">Hi, I'm Dalton</h1>
+                <p class="text-muted mb-3">Computer Science @ CU Boulder · Full-stack developer</p>
 
-      <a href="resume.html" class="btn btn-primary">View my Résumé</a> <!-- Makes blue button to take to page  -->
+                <p class="lead mb-4">
+                  I'm a Computer Science student at the University of Colorado Boulder with a Business minor.
+                  I build web apps and tools, and I'm currently expanding my skills across backend services,
+                  databases, and modern UI.
+                </p>
 
+                <div class="d-flex gap-2 flex-wrap">
+                  <a href="resume.html" class="btn btn-primary">
+                    <i class="bi bi-file-earmark-text me-1"></i> View Résumé
+                  </a>
+                  <a href="projects.html" class="btn btn-outline-primary">
+                    <i class="bi bi-code-slash me-1"></i> View Projects
+                  </a>
+                  <a href="mailto:dafo8331@colorado.edu" class="btn btn-outline-dark">
+                    <i class="bi bi-envelope me-1"></i> Contact
+                  </a>
+                </div>
 
+                <hr class="my-4">
+
+                <div class="row g-3">
+                  <div class="col-sm-6 col-lg-4">
+                    <div class="p-3 border rounded-3 h-100">
+                      <div class="fw-semibold mb-1">Tech</div>
+                      <div class="text-muted small">Java · JavaScript · Node/Express · SQL · Git · Docker</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4">
+                    <div class="p-3 border rounded-3 h-100">
+                      <div class="fw-semibold mb-1">Involvement</div>
+                      <div class="text-muted small">NSBE · Alpha Kappa Psi · Kappa Theta Pi</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4">
+                    <div class="p-3 border rounded-3 h-100">
+                      <div class="fw-semibold mb-1">Current</div>
+                      <div class="text-muted small">Welcome Desk Specialist · Leeds School of Business</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
+          </div>
+
         </div>
+      </div>
+    </section>
+
+    <section class="section-muted py-4">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-2">
+          <div>
+            <div class="fw-semibold">Looking for internships & team projects</div>
+            <div class="text-muted">If you’d like to collaborate or chat, email me anytime.</div>
+          </div>
+          <div class="d-flex gap-2">
+            <a class="btn btn-sm btn-outline-dark" href="projects.html">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Explore work
+            </a>
+            <a class="btn btn-sm btn-dark" href="resume.html">
+              <i class="bi bi-download me-1"></i> Résumé
+            </a>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
+  </main>
 
-
-</main>
-
-   <!-- This is the start of the footer and the stuff it has -->
+  <!-- Footer -->
   <footer class="bg-dark text-light py-3 mt-auto">
-  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
-    <span class="small">Dalton Ford</span>
-    <div class="d-flex gap-2">
-      <a class="btn btn-outline-light btn-sm" href="https://github.com/DaltonRFM" target="_blank" rel="noopener" aria-label="GitHub">
-        <i class="bi bi-github"></i>
-      </a>
-      <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/dalton-ford8331/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <i class="bi bi-linkedin"></i>
-      </a>
-      <a class="btn btn-outline-light btn-sm" href="mailto:dafo8331@colorado.edu" aria-label="Email">
-        <i class="bi bi-envelope-fill"></i>
-      </a>
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <span class="small">© <span id="year"></span> Dalton Ford</span>
+
+      <div class="d-flex gap-2">
+        <a class="btn btn-outline-light btn-sm" href="https://github.com/DaltonRFM" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/dalton-ford8331/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a class="btn btn-outline-light btn-sm" href="mailto:dafo8331@colorado.edu" aria-label="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>

@@ -1,17 +1,14 @@
 <!doctype html>
-  <!-- Projects file. -->
+<!-- Hobbies page -->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hobbies</title>
 
+  <title>Hobbies | Dalton Ford</title>
+  <meta name="description" content="Hobbies and interests of Dalton Ford — sports, reading, programming, and games." />
 
-  <link rel="stylesheet" href="styles.css" />
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-
+  <!-- Bootstrap -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -19,118 +16,239 @@
     crossorigin="anonymous"
   />
 
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Your CSS (pick ONE path; keep consistent across pages) -->
   <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Page polish (optional; move into styles.css if you want) -->
+  <style>
+    :root { --max: 1100px; }
+    main .container { max-width: var(--max); }
+
+    .page-hero { padding: 3.25rem 0 1.25rem; }
+    .page-hero .subtitle { color: rgba(0,0,0,.7); }
+
+    .avatar { object-fit: cover; }
+
+    .hobby-card img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      padding: .35rem .6rem;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 999px;
+      font-size: .85rem;
+      color: rgba(0,0,0,.75);
+      background: rgba(0,0,0,.02);
+      white-space: nowrap;
+    }
+
+    .soft-muted {
+      background: rgba(0,0,0,.02);
+      border-top: 1px solid rgba(0,0,0,.06);
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+  </style>
 </head>
-<body>
-<!-- Nav bar -->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="home.html">Dalton's Portfolio</a>
+<body class="d-flex flex-column min-vh-100">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- Nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-semibold" href="home.html">Dalton Ford</a>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
-        <li class="nav-item"><a class="nav-link" href="resume.html">Résumé</a></li>
-      </ul>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <!-- Right image of the nav bar -->
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item">
-          <a class="nav-link p-0" href="#" aria-label="Profile">
-            <img src="../resources/img/Graduation ImagePNG.png" alt="Profile"
-                 class="avatar rounded-circle" width="36" height="36">
-          </a>
-        </li>
-      </ul>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="hobbies.html">Hobbies</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Résumé</a></li>
+        </ul>
+
+        <!-- Right image -->
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link p-0" href="resume.html" aria-label="Open résumé">
+              <img src="../resources/img/Graduation ImagePNG.png" alt="Dalton Ford profile photo"
+                   class="avatar rounded-circle border border-2 border-light" width="36" height="36">
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-    <!-- End of nav bar -->
-  <div class="container">
-        <h1 class="text-center">Hobbies</h1>
+  </nav>
+  <!-- End nav bar -->
 
-                <!-- Cards in the container below -->
-            <div class="container py-3">
-            <div class="d-flex flex-wrap gap-3">
+  <main class="flex-grow-1">
 
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-start align-items-md-end justify-content-between gap-3">
+          <div>
+            <h1 class="display-6 mb-1">Hobbies</h1>
+            <p class="subtitle mb-0">
+              A few things I enjoy outside of class and work.
+            </p>
+          </div>
 
-            <div class="card" style="width: 18rem;">
-            <img src="../resources/img/Nuggets.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Supporting the Denver Nuggets</h5>
-                <p class="card-text">I am going into year 10 of watching and supporting the Nuggets. I am hopeful
-                    that they can win the championship this year.
+          <div class="d-flex gap-2 flex-wrap">
+            <span class="tag"><i class="bi bi-dribbble"></i> Sports</span>
+            <span class="tag"><i class="bi bi-book"></i> Reading</span>
+            <span class="tag"><i class="bi bi-code-slash"></i> Building</span>
+            <span class="tag"><i class="bi bi-controller"></i> Games</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies grid -->
+    <section class="soft-muted py-4">
+      <div class="container">
+        <div class="row g-4">
+
+          <!-- Nuggets -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card hobby-card h-100 shadow-sm border-0">
+              <img src="../resources/img/Nuggets.png" class="card-img-top" alt="Denver Nuggets logo or game photo">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-trophy"></i>
+                  <h2 class="h5 mb-0">Denver Nuggets</h2>
+                </div>
+                <p class="text-muted mb-0">
+                  I’ve followed the Nuggets for years and love keeping up with the season, big matchups, and playoff runs.
                 </p>
+              </div>
             </div>
-            </div>
-            <!-- End of first card -->
+          </div>
 
-            <div class="card" style="width: 18rem;">
-            <img src="../resources/img/Reading.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Reading Books</h5>
-                <p class="card-text">I enjoy reading books in my free time. It helos
-                    disconnect me from technology and fully relax for a little while.
+          <!-- Reading -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card hobby-card h-100 shadow-sm border-0">
+              <img src="../resources/img/Reading.png" class="card-img-top" alt="Books or reading illustration">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-book"></i>
+                  <h2 class="h5 mb-0">Reading</h2>
+                </div>
+                <p class="text-muted mb-0">
+                  Reading helps me unplug and recharge. I like mixing in fiction with books that teach practical skills.
                 </p>
+              </div>
             </div>
+          </div>
+
+          <!-- Programming -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card hobby-card h-100 shadow-sm border-0">
+              <img src="../resources/img/code.png" class="card-img-top" alt="Code on a screen">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-code-slash"></i>
+                  <h2 class="h5 mb-0">Programming</h2>
+                </div>
+                <p class="text-muted mb-0">
+                  I enjoy building software projects—especially web and mobile apps—because there’s always something new to learn.
+                </p>
+              </div>
             </div>
-            <!-- End of second card -->
+          </div>
 
-            <div class="card" style="width: 18rem;">
-            <img src="../resources/img/code.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Programming</h5>
-                <p class="card-text">As a Computer Science major, I enjoy building software projects. Especially mobile and web applications.</p>
+          <!-- Video Games -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card hobby-card h-100 shadow-sm border-0">
+              <img src="../resources/img/gaming.jpeg" class="card-img-top" alt="Gaming setup or controller">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-controller"></i>
+                  <h2 class="h5 mb-0">Video Games</h2>
+                </div>
+                <p class="text-muted mb-0">
+                  I’m into single-player games and occasionally shooters—mostly for fun, story, and staying competitive with friends.
+                </p>
+              </div>
             </div>
+          </div>
+
+          <!-- Optional extra hobby card (copy/paste to add more) -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card hobby-card h-100 shadow-sm border-0">
+              <img src="../resources/img/Graduation ImagePNG.png" class="card-img-top" alt="Dalton photo placeholder">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-people"></i>
+                  <h2 class="h5 mb-0">Campus & Community</h2>
+                </div>
+                <p class="text-muted mb-0">
+                  I like staying involved on campus through student orgs and community events—great way to meet people and learn.
+                </p>
+              </div>
             </div>
+          </div>
 
-            <!-- End of third card -->
-
-            <div class="card" style="width: 18rem;">
-            <img src="../resources/img/gaming.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Video Games</h5>
-                <p class="card-text">In my free time sometimes, I enjoy playing video games. I mostly enjoy single player games or sometimes shooter genres.</p>
+          <!-- Optional extra hobby card -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card hobby-card h-100 shadow-sm border-0">
+              <img src="../resources/img/imageOne.jpg" class="card-img-top" alt="Dalton headshot placeholder">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="bi bi-lightning-charge"></i>
+                  <h2 class="h5 mb-0">Learning New Tech</h2>
+                </div>
+                <p class="text-muted mb-0">
+                  I’m always exploring new tools and frameworks—right now I’m especially interested in mobile development and backend systems.
+                </p>
+              </div>
             </div>
-            </div>
+          </div>
 
+        </div>
+      </div>
+    </section>
 
-            </div>
-            </div>
+  </main>
 
-                
-
-                
-
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-3 mt-auto">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <span class="small">© <span id="year"></span> Dalton Ford</span>
+      <div class="d-flex gap-2">
+        <a class="btn btn-outline-light btn-sm" href="https://github.com/DaltonRFM" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/dalton-ford8331/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a class="btn btn-outline-light btn-sm" href="mailto:dafo8331@colorado.edu" aria-label="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+      </div>
     </div>
+  </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-      <!-- This is the start of the footer and the stuff it has -->
-  <footer class="bg-dark text-light py-3 mt-5">
-  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
-    <span class="small">Dalton Ford</span>
-    <div class="d-flex gap-2">
-      <a class="btn btn-outline-light btn-sm" href="https://github.com/DaltonRFM" target="_blank" rel="noopener" aria-label="GitHub">
-        <i class="bi bi-github"></i>
-      </a>
-      <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/dalton-ford8331/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <i class="bi bi-linkedin"></i>
-      </a>
-      <a class="btn btn-outline-light btn-sm" href="mailto:dafo8331@colorado.edu" aria-label="Email">
-        <i class="bi bi-envelope-fill"></i>
-      </a>
-    </div>
-  </div>
-</footer>
-  
+  <!-- Footer year -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
